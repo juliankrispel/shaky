@@ -3,16 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.5",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "recompose": "^0.22.0"
   },
   "devDependencies": {
-    "custom-react-scripts": "0.0.23"
+    "flow-bin": "^0.42.0",
+    "babel-eslint": "^7.2.0",
+    "flow-scripts": "^0.2.0",
+    "documentation": "^4.0.0-beta.18",
+    "eslint-config-rainforest": "^0.2.8",
+    "custom-react-scripts": "0.0.23",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "flow-watch": "flow-scripts stub && fswatch -o ./src | xargs -n1 -I{} sh -c 'clear; printf \"\\033[3J\" && flow check --all'",
+    "docs": "documentation build src -f md > API.md"
   }
 }

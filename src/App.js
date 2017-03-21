@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 
 //styles
-import './App.less';
-import './App.scss';
-import './App.styl';
 import styles from './Modules.css';
 
 class App extends Component {
